@@ -7,13 +7,13 @@ import { Button } from "neetoui";
 const Carousel = ({ imageUrls, title }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handleNext = () => {
-    setCurrentIndex(prev => (prev + 1) % imageUrls.length);
-  };
+  const handleNext = () =>
+    setCurrentIndex(prevIndex => (prevIndex + 1) % imageUrls.length);
 
-  const handlePrevious = () => {
-    setCurrentIndex(prev => (prev - 1 + imageUrls.length) % imageUrls.length);
-  };
+  const handlePrevious = () =>
+    setCurrentIndex(
+      prevIndex => (prevIndex - 1 + imageUrls.length) % imageUrls.length
+    );
 
   return (
     <div className="flex flex-col items-center">
