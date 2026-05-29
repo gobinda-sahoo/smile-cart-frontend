@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 
 import productsApi from "apis/products";
 
-import { PageLoader } from "./commons";
-import Header from "./commons/Header";
 import ProductListItem from "./ProductListItem";
+
+import { PageLoader } from "../commons";
+import Header from "../commons/Header";
 
 const ProductList = () => {
   const [isLoading, setIsLoading] = useState(true);
